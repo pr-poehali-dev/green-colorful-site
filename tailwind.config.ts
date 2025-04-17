@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -61,6 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Добавленные цвета для зеленой темы
+				republic: {
+					light: '#e6f7e9',
+					DEFAULT: '#2e8b57',
+					dark: '#1a5632'
+				},
+				season: {
+					spring: '#8bc34a',
+					summer: '#4caf50',
+					autumn: '#ff9800',
+					winter: '#90caf9'
 				}
 			},
 			borderRadius: {
