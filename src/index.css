@@ -2,94 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @layer base {
   :root {
-    --background: 180 30% 97%;
-    --foreground: 180 50% 15%;
+    --background: 220 100% 98%;
+    --foreground: 230 60% 15%;
 
-    --card: 180 25% 95%;
-    --card-foreground: 180 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 60% 15%;
 
-    --popover: 180 30% 97%;
-    --popover-foreground: 180 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 60% 15%;
 
-    --primary: 170 100% 28%;
-    --primary-foreground: 170 100% 97%;
+    --primary: 158 100% 39%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 20% 90%;
-    --secondary-foreground: 180 50% 20%;
+    --secondary: 224 100% 68%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 180 10% 90%;
-    --muted-foreground: 180 30% 40%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 25% 40%;
 
-    --accent: 180 40% 85%;
-    --accent-foreground: 180 50% 15%;
+    --accent: 200 70% 96%;
+    --accent-foreground: 230 60% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 352 95% 61%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 180 30% 85%;
-    --input: 180 30% 85%;
-    --ring: 170 100% 28%;
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 158 100% 39%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 180 30% 95%;
-    --sidebar-foreground: 180 50% 20%;
-    --sidebar-primary: 170 100% 28%;
-    --sidebar-primary-foreground: 170 100% 97%;
-    --sidebar-accent: 180 20% 90%;
-    --sidebar-accent-foreground: 180 50% 20%;
-    --sidebar-border: 180 20% 85%;
-    --sidebar-ring: 170 100% 28%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 230 60% 15%;
+    --sidebar-primary: 158 100% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 100% 68%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 158 100% 39%;
   }
 
   .dark {
-    --background: 180 50% 10%;
-    --foreground: 180 20% 95%;
+    --background: 230 40% 10%;
+    --foreground: 210 20% 98%;
 
-    --card: 180 50% 15%;
-    --card-foreground: 180 20% 95%;
+    --card: 230 30% 15%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 180 50% 10%;
-    --popover-foreground: 180 20% 95%;
+    --popover: 230 30% 15%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 170 60% 40%;
-    --primary-foreground: 170 10% 98%;
+    --primary: 158 70% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 30% 25%;
-    --secondary-foreground: 180 20% 95%;
+    --secondary: 224 70% 63%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 180 30% 20%;
-    --muted-foreground: 180 20% 70%;
+    --muted: 230 25% 20%;
+    --muted-foreground: 215 25% 70%;
 
-    --accent: 180 30% 25%;
-    --accent-foreground: 180 20% 95%;
+    --accent: 230 25% 25%;
+    --accent-foreground: 210 20% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 352 90% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 180 30% 25%;
-    --input: 180 30% 25%;
-    --ring: 170 60% 50%;
+    --border: 230 25% 25%;
+    --input: 230 25% 25%;
+    --ring: 158 70% 42%;
 
-    --sidebar-background: 180 50% 10%;
-    --sidebar-foreground: 180 20% 95%;
-    --sidebar-primary: 170 60% 40%;
-    --sidebar-primary-foreground: 170 10% 98%;
-    --sidebar-accent: 180 30% 25%;
-    --sidebar-accent-foreground: 180 20% 95%;
-    --sidebar-border: 180 30% 20%;
-    --sidebar-ring: 170 60% 50%;
+    --sidebar-background: 230 40% 10%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 158 70% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 70% 63%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 25% 20%;
+    --sidebar-ring: 158 70% 42%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Montserrat', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Добавляем стилизованные скроллбары */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.muted.DEFAULT');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.tatarstan.green');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.tatarstan.accent3');
+}
+
+/* Анимации для элементов при прокрутке */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стилизованные градиенты для фона */
+.bg-gradient-modern {
+  background: linear-gradient(120deg, theme('colors.tatarstan.green'), theme('colors.tatarstan.accent3'));
+}
+
+.bg-gradient-modern-red {
+  background: linear-gradient(120deg, theme('colors.tatarstan.red'), theme('colors.tatarstan.accent2'));
+}
+
+/* Стеклянный эффект для карточек */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
