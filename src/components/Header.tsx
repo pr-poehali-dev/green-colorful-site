@@ -1,12 +1,12 @@
-import { Leaf } from 'lucide-react';
+import { Building } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="bg-primary text-primary-foreground py-6 px-4 shadow-md">
+    <header className="bg-gradient-to-r from-republic to-tatarstan-red text-white py-6 px-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Leaf className="h-8 w-8" />
-          <h1 className="text-2xl font-bold">Республика Карелия</h1>
+          <Building className="h-8 w-8" />
+          <h1 className="text-2xl font-bold">Республика Татарстан</h1>
         </div>
         <nav>
           <ul className="flex space-x-6">

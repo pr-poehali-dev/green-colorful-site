@@ -10,10 +10,10 @@ const Index = () => {
       <Header />
       
       <main className="flex-grow">
-        <div className="bg-republic bg-opacity-10 py-16 px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-republic-dark mb-4">Добро пожаловать в Карелию</h1>
+        <div className="bg-gradient-to-r from-republic/10 to-tatarstan-red/10 py-16 px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-republic-dark mb-4">Добро пожаловать в Татарстан</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Узнайте всё о прекрасной республике на северо-западе России: климат, природа и советы путешественникам
+            Узнайте всё о прекрасной республике в центре России: климат, культура и советы путешественникам
           </p>
         </div>
         

@@ -1,13 +1,13 @@
-import { Leaf } from 'lucide-react';
+import { Building } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-6">
+    <footer className="bg-gradient-to-r from-republic to-tatarstan-red text-white py-6">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <Leaf className="h-6 w-6" />
-            <h2 className="text-xl font-bold">Республика Карелия</h2>
+            <Building className="h-6 w-6" />
+            <h2 className="text-xl font-bold">Республика Татарстан</h2>
           </div>
           
           <div className="text-center md:text-right">

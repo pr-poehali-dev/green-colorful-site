@@ -62,17 +62,22 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Добавленные цвета для зеленой темы
+				// Обновлённые цвета для темы Татарстана (зелёный и красный)
 				republic: {
-					light: '#e6f7e9',
-					DEFAULT: '#2e8b57',
-					dark: '#1a5632'
+					light: '#eaf7fa',
+					DEFAULT: '#008d76', // Зеленый из флага Татарстана
+					dark: '#006655'
+				},
+				tatarstan: {
+					red: '#de2110', // Красный из флага Татарстана
+					green: '#008d76', // Зеленый из флага Татарстана
+					white: '#ffffff'
 				},
 				season: {
-					spring: '#8bc34a',
-					summer: '#4caf50',
-					autumn: '#ff9800',
-					winter: '#90caf9'
+					spring: '#7cc4d4',
+					summer: '#008d76',
+					autumn: '#dd533c',
+					winter: '#8aa9c1'
 				}
 			},
 			borderRadius: {
