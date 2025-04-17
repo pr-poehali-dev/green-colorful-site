@@ -1,11 +1,16 @@
 import { Cloud, Sun, CloudRain, Snowflake } from "lucide-react";
-import { motion } from 'framer-motion';
 import { useEffect, useState } from "react";
 
-// Имитация импорта framer-motion
-const motion = {
-  div: ({ children, ...props }: any) => <div {...props}>{children}</div>
-};
+// Имитация компонента motion для анимации
+interface MotionProps {
+  children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const MotionDiv = ({ children, className, style }: MotionProps) => (
+  <div className={className} style={style}>{children}</div>
+);
 
 const WeatherInfo = () => {
   const [visible, setVisible] = useState(false);
@@ -53,7 +58,7 @@ const WeatherInfo = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <motion.div 
+          <MotionDiv 
             className={`transform ${visible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}
             style={{ transitionDelay: '100ms' }}
           >
@@ -65,9 +70,9 @@ const WeatherInfo = () => {
               color="from-blue-200 to-season-spring"
               description="Весна наступает в середине марта и быстро преображает природу. Снег тает, реки освобождаются ото льда, появляется первая зелень. В апреле зацветают сады, а май радует теплом и яркими красками."
             />
-          </motion.div>
+          </MotionDiv>
           
-          <motion.div 
+          <MotionDiv 
             className={`transform ${visible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}
             style={{ transitionDelay: '200ms' }}
           >
@@ -79,9 +84,9 @@ const WeatherInfo = () => {
               color="from-green-300 to-season-summer"
               description="Лето теплое и солнечное. Июль — самый жаркий месяц, когда температура может достигать +32°C. Идеальное время для отдыха на природе, купания в реках и озерах, а также для знакомства с достопримечательностями республики."
             />
-          </motion.div>
+          </MotionDiv>
           
-          <motion.div 
+          <MotionDiv 
             className={`transform ${visible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}
             style={{ transitionDelay: '300ms' }}
           >
@@ -93,9 +98,9 @@ const WeatherInfo = () => {
               color="from-yellow-300 to-season-autumn"
               description="Осень в Татарстане начинается с бархатного сезона в сентябре («бабье лето»), когда ещё тепло и солнечно. Октябрь раскрашивает леса в золотые краски, а к ноябрю становится прохладно и возможны первые заморозки."
             />
-          </motion.div>
+          </MotionDiv>
           
-          <motion.div 
+          <MotionDiv 
             className={`transform ${visible ? 'animate-on-scroll visible' : 'animate-on-scroll'}`}
             style={{ transitionDelay: '400ms' }}
           >
@@ -107,7 +112,7 @@ const WeatherInfo = () => {
               color="from-blue-300 to-season-winter"
               description="Зима снежная и достаточно холодная. Устойчивый снежный покров образуется в декабре и держится до марта. Январь и февраль — самые холодные месяцы. Это время для зимних видов спорта и новогодних праздников."
             />
-          </motion.div>
+          </MotionDiv>
         </div>
         
         <div className="mt-16 bg-gradient-to-r from-tatarstan-green/10 to-tatarstan-accent3/10 rounded-2xl p-6 md:p-8">
